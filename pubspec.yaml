@@ -1,0 +1,16 @@
+name: tsac_dart
+description: Asynchronous task management tool for dart.
+version: 0.0.1
+author: Piyush Kumar<dev.piyushkumar@gmail.com>
+homepage: https://github.com/dev-piyushkumar/tsac_dart
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+environment:
+  sdk: ">=2.0.0 <3.0.0"
