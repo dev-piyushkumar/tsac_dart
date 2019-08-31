@@ -1,5 +1,7 @@
 # tsac_dart
 
+[![pub package](https://img.shields.io/pub/v/tsac_dart.svg)](https://pub.dev/packages/tsac_dart)
+
 Asynchronous task management tool for dart.
 
 ## Getting Started
