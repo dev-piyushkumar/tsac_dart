@@ -8,28 +8,28 @@ main() {
 }
 
 final Task task1 = Task(token: "12345", jobs: [
-  () async {
+      () async {
     print("task1.job1 started!");
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(Duration(milliseconds: 700));
     print("task1.job1 done!");
   },
-  () async {
+      () async {
     print("task1.job2 started!");
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(Duration(milliseconds: 700));
     print("task1.job2 done!");
   },
 ],);
 
 final Task task2 = Task(token: "123456", jobs: [
-  () async {
+      () async {
     print("task2.job1 started!");
     tsac.cancelWithToken("12345");
     await Future.delayed(Duration(milliseconds: 700));
     print("task2.job1 done!");
   },
-  () async {
+      () async {
     print("task2.job2 started!");
-    await Future.delayed(Duration(milliseconds: 1200));
+    await Future.delayed(Duration(milliseconds: 700));
     print("task2.job2 done!");
   },
 ],);
