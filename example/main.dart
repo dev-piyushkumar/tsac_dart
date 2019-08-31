@@ -1,21 +1,19 @@
-import 'package:flutter_test/flutter_test.dart';
-
 import 'package:tsac_dart/tsac_dart.dart';
 
-void main() {
-  test('tsac_dart simple test', () {
-    tsac.startTask(task1);
-    tsac.startTask(task2);
-  });
+main() {
+
+  tsac.startTask(task1);
+
+  tsac.startTask(task2);
 }
 
 final Task task1 = Task(token: "12345", jobs: [
-      () async {
+  () async {
     print("task1.job1 started!");
     await Future.delayed(Duration(seconds: 3));
     print("task1.job1 done!");
   },
-      () async {
+  () async {
     print("task1.job2 started!");
     await Future.delayed(Duration(seconds: 3));
     print("task1.job2 done!");
@@ -23,13 +21,13 @@ final Task task1 = Task(token: "12345", jobs: [
 ],);
 
 final Task task2 = Task(token: "123456", jobs: [
-      () async {
+  () async {
     print("task2.job1 started!");
     tsac.cancelWithToken("12345");
     await Future.delayed(Duration(milliseconds: 700));
     print("task2.job1 done!");
   },
-      () async {
+  () async {
     print("task2.job2 started!");
     await Future.delayed(Duration(milliseconds: 1200));
     print("task2.job2 done!");
